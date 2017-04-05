@@ -16,6 +16,7 @@ const cli = meow(`
 		--hidden Create a link as a dotfile [Default: false]
 	  --no-ext Strip extension string in filename [Default: false]
 	  --overwrite Overwrite exist symbolic link or not [Default: false]
+		--verbose Show a progress
 
 	Examples
 	  $ sn **/*.symlink "$HOME/Google Drive/dotfiles" $HOME
@@ -31,7 +32,7 @@ const patterns = cli.input.map(p => unenvify(untildify(p)));
 let filter;
 
 if (cli.flags.hidden || cli.flags.ext === false) {
-	filter = f => `${cli.flags.hidden ? '.' : ''}${cli.flags.ext ? f : path.basename(f, path.extname(f))}`;
+	filter = f => `${cli.flags.hidden ? '.' : ''}${cli.flags.ext !== false? f : path.basename(f, path.extname(f))}`;
 }
 
 symlinks(patterns, dest, filter, cli.flags).then(links => {
