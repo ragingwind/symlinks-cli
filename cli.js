@@ -36,5 +36,9 @@ if (cli.flags.hidden || cli.flags.ext === false) {
 }
 
 symlinks(patterns, dest, filter, cli.flags).then(links => {
-	links.map(link => console.log(`Create a link to ${link}`));
+	links.map(link => {
+		if (cli.flags.verbose) {
+			console.log(`${link} has been created`);
+		}
+	});
 });
