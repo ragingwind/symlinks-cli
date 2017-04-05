@@ -1,6 +1,6 @@
 {
   "name": "@moonandyou/symlinks-cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CLI for creating symlinks in a safeway",
   "license": "MIT",
   "repository": "moonandyou/symlinks-cli",
@@ -42,7 +42,10 @@
   },
   "xo": {
     "rules": {
-      "capitalized-comments": ["error", "never"]
+      "capitalized-comments": [
+        "error",
+        "never"
+      ]
     }
   }
 }
