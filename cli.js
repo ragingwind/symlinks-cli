@@ -15,7 +15,7 @@ const cli = meow(`
 	Options
 		--hidden Create a link as a dotfile [Default: false]
 	  --no-ext Strip extension string in filename [Default: false]
-	  --overwrite Overwrite exist symbolic link or not [Default: false]
+	  --unlink Unlink exist symbolic link or not [Default: false]
 		--verbose Show a progress
 
 	Examples
