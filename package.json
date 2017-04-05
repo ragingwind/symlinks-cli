@@ -1,0 +1,48 @@
+{
+  "name": "@moonandyou/symlinks-cli",
+  "version": "0.0.0",
+  "description": "CLI for creating symlinks in a safeway",
+  "license": "MIT",
+  "repository": "moonandyou/symlinks-cli",
+  "author": {
+    "name": "ragingwind",
+    "email": "ragingwind@gmail.com",
+    "url": "ragingwind.me"
+  },
+  "bin": {
+    "sn": "cli.js"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "symlink",
+    "dotfile"
+  ],
+  "dependencies": {
+    "@moonandyou/symlinks": "^0.1.0",
+    "meow": "^3.7.0",
+    "unenvify": "^0.1.0",
+    "untildify": "^3.0.2"
+  },
+  "devDependencies": {
+    "ava": "^0.19.0",
+    "execa": "^0.6.3",
+    "mkdirp": "^0.5.1",
+    "os-random-tmpdir": "^0.1.1",
+    "xo": "^0.18.1"
+  },
+  "xo": {
+    "rules": {
+      "capitalized-comments": ["error", "never"]
+    }
+  }
+}
